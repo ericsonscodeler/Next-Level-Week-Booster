@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import {FiLogIn} from 'react-icons/fi'
 
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.png'
 
 const Home = ()=> {
     return (
