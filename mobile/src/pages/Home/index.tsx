@@ -51,6 +51,7 @@ const Home = () => {
                 style={styles.input}
                 placeholder="Digite a Cidade"
                 value={city}
+                autoCorrect={false}
                 onChangeText={setCity}
                 />
                   <RectButton style={styles.button} onPress={handleNavigationToPoints}>

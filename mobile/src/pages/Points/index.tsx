@@ -9,15 +9,16 @@ import {SvgUri} from 'react-native-svg'
 import api from '../../services/api'
 
 interface Item {
-	id: number,
-	title: string
-	image_url: string
+	id: number;
+	title: string;
+	image_url: string;
 }
 
 interface Point {
-	id: number,
-	name: string,
-	image: string,
+	id: number;
+	name: string;
+  image: string;
+  image_url: string;
 	latitude: number;
 	longitude: number;
 }
@@ -80,7 +81,7 @@ const Points = () => {
 		}).then(response => {
 			setPoints(response.data)
 		} )
-	},[selectedItems])
+	},[selectedItems]);
 
     function handleNavigateBack (){
         navigation.goBack();
@@ -132,7 +133,7 @@ const Points = () => {
 									latitude: point.latitude,
 									  longitude: point.longitude,}}>
 									 <View style={styles.mapMarkerContainer}>	  
-										 <Image style={styles.mapMarkerImage} source={{uri: point.image}}/>
+										 <Image style={styles.mapMarkerImage} source={{uri: point.image_url}}/>
 										<Text style={styles.mapMarkerTitle}>{point.name} </Text>
 									 </View>
 								 </Marker>
